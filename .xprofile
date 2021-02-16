@@ -1,0 +1,19 @@
+# ~/.xprofile
+#
+# Commands in this file will be executed by lightdm on login
+
+# The Xwindows system maintains three 'selections' for copy/paste
+# operations - PRIMARY, SECONDARY (unused) and CLIPBOARD. The 'selection'
+# used to copy to or paste from depends on the X process or application
+# being used.
+# For example, the automatic copying of text selected with the mouse writes
+# to the PRIMARY selection. However, tmux may be configured to write to the
+# CLIPBOARD selection.
+# The mismatch between the 'selection' used by different processes and
+# applications can cause serious confusion when trying to perform
+# copy/paste operations under X.
+# The autocutsel application allows us to mitigate this issue by running in
+# the background and maintaining bi-directional sychronisation between each
+# 'selection'
+autocutsel -selection CLIPBOARD -fork &
+autocutsel -selection PRIMARY -fork &

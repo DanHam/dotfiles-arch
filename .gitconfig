@@ -1,0 +1,36 @@
+[color]
+    ui = auto
+[core]
+    editor = nvim
+    excludesfile = $HOME/.gitignore
+[push]
+    default = simple
+[user]
+    name = DanHam
+    email = DanHam@users.noreply.github.com
+    signingKey = D6AA987E
+[credential]
+    helper = /usr/bin/pass-git-helper
+    useHttpPath = true
+[alias]
+    unstage = reset HEAD --
+    last = log -1 HEAD
+[status]
+    submodulesummary = 1
+[diff]
+    tool = nvimdiff
+[difftool]
+    prompt = false
+[difftool "nvimdiff"]
+    cmd = nvim -d "$LOCAL" "$REMOTE"
+[merge]
+    tool = nvimdiff
+    conflictstyle = diff3
+[mergetool]
+    prompt = false
+[mergetool "nvimdiff"]
+    cmd = nvim -d "$BASE" "$LOCAL" "$REMOTE" "$MERGED" -c '$wincmd w' -c 'wincmd J'
+[pull]
+    rebase = false
+[init]
+	defaultBranch = main
