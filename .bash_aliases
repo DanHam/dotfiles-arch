@@ -50,9 +50,9 @@ if type -t __start_helm &>/dev/null; then
 fi
 podman_completions=/usr/share/bash-completion/completions/podman
 if [ -f "${podman_completions}" ]; then
-    if ! type -t _cli_bash_autocomplete &>/dev/null; then
+    if ! type -t __start_podman &>/dev/null; then
         source "${podman_completions}"
     fi
-    complete -F _cli_bash_autocomplete p
+    complete -F __start_podman p
 fi
 unset podman_completions
