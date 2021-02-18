@@ -119,9 +119,12 @@ fi
 unset go_completions
 
 # Packer command completions
+# https://github.com/mrolli/packer-bash-completion.git
+packer_completions="${completiond}/packer/packer"
 if command -v packer &>/dev/null; then
-    complete -C packer packer
+    source "${packer_completions}"
 fi
+unset packer_completions
 
 # kubectl command completions and shortcuts
 if command -v kubectl &>/dev/null; then
