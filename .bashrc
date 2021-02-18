@@ -190,6 +190,18 @@ unset ufw_completions
 
 
 # Alias definitions.
+#
+# Source 'complete-alias' to allow 'automagical' completions for aliases
+# See: https://github.com/cykerway/complete-alias
+#
+# Note: Completion commands for user defined aliases will be stored in
+# .bash_aliases rather than in the complete_alias script itself. Therefore
+# the complete_alias script must always be sourced before .bash_aliases
+compalias="${HOME}/.local/share/bash_completion.d/complete-alias/complete_alias"
+[ -r "${compalias}" ] && source "${compalias}"
+unset compalias
+#
+# Source all aliases
 [ -r "${HOME}/.bash_aliases" ] && source "${HOME}/.bash_aliases"
 
 

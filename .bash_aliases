@@ -41,18 +41,22 @@ alias tree='tree -AC'
 alias vim='nvim'
 alias vimdiff='nvim -d'
 
-# Completions for aliases
-if type -t __start_kubectl &>/dev/null; then
-    complete -f -F __start_kubectl k
-fi
-if type -t __start_helm &>/dev/null; then
-    complete -F __start_helm h
-fi
-podman_completions=/usr/share/bash-completion/completions/podman
-if [ -f "${podman_completions}" ]; then
-    if ! type -t __start_podman &>/dev/null; then
-        source "${podman_completions}"
-    fi
-    complete -F __start_podman p
-fi
-unset podman_completions
+# Enable completion for aliases using 'complete_alias' (see .bashrc)
+complete -F _complete_alias ga
+complete -F _complete_alias gb
+complete -F _complete_alias gc
+complete -F _complete_alias gd
+complete -F _complete_alias gdt
+complete -F _complete_alias gf
+complete -F _complete_alias gl
+complete -F _complete_alias gm
+complete -F _complete_alias gmt
+complete -F _complete_alias gpl
+complete -F _complete_alias gps
+complete -F _complete_alias gs
+complete -F _complete_alias h
+complete -F _complete_alias k
+complete -F _complete_alias la
+complete -F _complete_alias ll
+complete -F _complete_alias p
+complete -F _complete_alias sl
