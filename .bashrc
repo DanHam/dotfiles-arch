@@ -156,11 +156,6 @@ if command -v hugo &>/dev/null; then
     unset hugo_completions
 fi
 
-# Terraform
-if command -v terraform &>/dev/null; then
-    complete -C "$(command -v terraform)" terraform
-fi
-
 # fzf
 fzf_completions="/usr/share/fzf/completion.bash"
 fzf_keybindings="/usr/share/fzf/key-bindings.bash"
