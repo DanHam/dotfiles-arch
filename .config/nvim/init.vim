@@ -21,7 +21,7 @@
 "   Golang:
 "   - go
 "
-"   Python client for Neovim:
+"   PythonClientForNeovim:
 "   - python-pynvim
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -126,8 +126,6 @@ Plug 'Raimondi/delimitMate'
 " vim-go
 "       - https://github.com/fatih/vim-go.git
 "       - Provides Go (golang) support for vim
-"       - Run :GoInstallBinaries to install the required Go Tools
-"       - Install deoplete for auto completion
 "
 if executable('go')
     Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries', 'for': 'go'}
@@ -246,6 +244,8 @@ let g:go_auto_type_info = 1
 let g:go_doc_popup_window = 1
 " Run GoFmt on save
 let g:go_fmt_command = "gofmt"
+" Don't run GoImports on save
+let g:go_imports_autosave = 0
 " Additional Go syntax highlighting
 let g:go_highlight_array_whitespace_error = 1
 let g:go_highlight_build_constraints = 1
@@ -271,13 +271,10 @@ let g:go_highlight_variable_declarations = 1
 " Set the Ultisnip edit window to open either vertically or horizontally
 " depending on context
 let g:UltiSnipsEditSplit = "context"
-" Use snippets defined by third party plugins (~/.vim/UltiSnips) and user
-" defined snippets (~/.vim/local-snippets)
-let g:UltiSnipsSnippetDirectories = ["UltiSnips", "local-snippets"]
 " Key bindings for UltiSnipsExpandTrigger
 let g:UltiSnipsExpandTrigger = "<C-space>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+let g:UltiSnipsJumpForwardTrigger = "<C-space>"
+let g:UltiSnipsJumpBackwardTrigger = "<C-b>"
 
 " vim-terraform
 "
