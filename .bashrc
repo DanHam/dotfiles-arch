@@ -126,14 +126,6 @@ if command -v packer &>/dev/null; then
 fi
 unset packer_completions
 
-# Vagrant command completions
-# Extracted from vagrant arch package
-vagrant_completions="${completiond}/vagrant/vagrant"
-if command -v vagrant &>/dev/null; then
-    source "${vagrant_completions}"
-fi
-unset vagrant_completions
-
 # kubectl command completions and shortcuts
 if command -v kubectl &>/dev/null; then
     source <(kubectl completion bash)
