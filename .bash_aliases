@@ -1,6 +1,7 @@
 # ~/.bash_aliases
 alias ansible-inventory='gpg-connect-agent updatestartuptty /bye &>/dev/null && ansible-inventory'
 alias ansible-playbook='gpg-connect-agent updatestartuptty /bye &>/dev/null && ansible-playbook'
+alias b='buildah'
 alias c='clear'
 alias cat='bat'
 alias cp='cp -iv'
@@ -42,6 +43,7 @@ alias vim='nvim'
 alias vimdiff='nvim -d'
 
 # Enable completion for aliases using 'complete_alias' (see .bashrc)
+complete -F _complete_alias b
 complete -F _complete_alias ga
 complete -F _complete_alias gb
 complete -F _complete_alias gc
