@@ -181,6 +181,15 @@ if command -v ufw &>/dev/null; then
 fi
 unset ufw_completions
 
+# Molecule
+#
+# NOTE: The command to enable shell completions is dependant on the version
+# of python-click that is installed and may change in future. See:
+# https://github.com/ansible-community/molecule/issues/3119
+# if command -v molecule &>/dev/null; then
+#     eval "$(_MOLECULE_COMPLETE=bash_source molecule)"
+# fi
+
 
 
 
