@@ -1,0 +1,3 @@
+# Set the cookiecutter cache dir
+cookiecutters_dir: ~/.cache/cookiecutter
+replay_dir: ~/.cache/cookiecutter
