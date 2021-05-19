@@ -194,6 +194,11 @@ unset ufw_completions
 #     eval "$(_MOLECULE_COMPLETE=bash_source molecule)"
 # fi
 
+# AWS CLI v2
+if command -v aws_completer &>/dev/null; then
+    complete -C aws_completer aws
+fi
+
 
 
 
