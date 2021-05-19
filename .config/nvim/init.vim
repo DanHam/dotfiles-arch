@@ -407,6 +407,18 @@ endif
 set dir=~/.local/share/nvim/swap,/var/tmp
 
 " --------------------------------------------------------------------------
+" Configure nvim to use the system python
+" --------------------------------------------------------------------------
+"
+" Setting nvim to use the system python avoids having to install pynvim in
+" each virtualenv.
+" NOTE: This means that running !python from nvim in a virtualenv will use
+" the system python *not* the python configured in the virtualenv. This
+" generates a warning from :checkhealth. However, for my particular use
+" case, this can be ignored.
+let g:python3_host_prog = '/usr/bin/python3'
+
+" --------------------------------------------------------------------------
 " Folding
 " --------------------------------------------------------------------------
 
