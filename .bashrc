@@ -99,6 +99,10 @@ if command -v direnv &>/dev/null; then
     eval "$(direnv hook bash)"
 fi
 
+# Virtualenvwrapper
+export WORKON_HOME="${HOME}/.virtualenvs"
+source /usr/bin/virtualenvwrapper.sh
+
 # Local completions directory
 completiond="${HOME}/.local/share/bash_completion.d"
 
