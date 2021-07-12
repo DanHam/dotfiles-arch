@@ -199,6 +199,11 @@ if command -v aws_completer &>/dev/null; then
     complete -C aws_completer aws
 fi
 
+# Amazon EKS - eksctl
+if command -v eksctl &>/dev/null; then
+    source <(eksctl completion bash)
+fi
+
 
 
 
