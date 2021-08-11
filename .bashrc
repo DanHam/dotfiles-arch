@@ -204,6 +204,11 @@ if command -v eksctl &>/dev/null; then
     source <(eksctl completion bash)
 fi
 
+# Operator SDK
+if command -v operator-sdk &>/dev/null; then
+    source <(operator-sdk completion bash)
+fi
+
 
 
 
