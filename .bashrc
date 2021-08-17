@@ -24,6 +24,9 @@ shopt -s globstar
 #
 git_prompt_sh="/usr/share/git/git-prompt.sh"
 if [ -e "$git_prompt_sh" ]; then
+    export GIT_PS1_SHOWDIRTYSTATE=true
+    export GIT_PS1_SHOWSTASHSTATE=true
+    export GIT_PS1_SHOWUNTRACKEDFILES=true
     source "$git_prompt_sh"
     PS1='\[\033[1;30m\]\u@\[\033[38;5;66m\]\h\[\033[01;34m\] \w \[\033[38;5;66m\]$(__git_ps1 "\n[%s] ")\[\033[01;34m\]\$\[\033[00m\] '
 else
