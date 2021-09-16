@@ -25,5 +25,10 @@ fi
 export COOKIECUTTER_CONFIG=${cookiecutter_config_dir}/cookiecutter.yml
 unset cookiecutter_config_dir
 
+# Add Yarn's bin directory to the path
+if [ -d "$HOME/.yarn/bin" ]; then
+    export PATH=$HOME/.yarn/bin:$PATH
+fi
+
 # Source the bashrc file
 [[ -f ~/.bashrc ]] && . ~/.bashrc
