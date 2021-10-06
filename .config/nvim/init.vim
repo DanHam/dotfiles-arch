@@ -577,6 +577,11 @@ if executable('clang-format')
     autocmd BufWritePre *.h,*.cc,*.c,*.cpp :ClangFormat
 endif
 
+" fzf
+"
+" Trigger FZF
+nnoremap <leader>f :FZF<CR>
+
 " --------------------------------------------------------------------------
 " Language settings
 " --------------------------------------------------------------------------
