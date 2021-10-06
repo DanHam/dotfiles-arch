@@ -5,5 +5,34 @@
     // Ensure coc-go uses the same language server as vim-go
     "go.goplsPath": "/home/dan/working/go/bin/gopls",
     "clangd.path": "/home/dan/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd",
-    "clangd.semanticHighlighting": true
+    "clangd.semanticHighlighting": true,
+
+    // coc-yaml settings
+    //
+    // default to k8s
+    "yaml.validate": false,
+
+    // Terraform Language Server
+    // See: https://github.com/hashicorp/terraform-ls
+    // Installed via AUR package
+    "languageserver": {
+        "terraform": {
+            "command": "terraform-ls",
+            "args": ["serve"],
+            "filetypes": [
+                "terraform",
+                "tf"
+            ],
+            "initializationOptions": {},
+            "settings": {}
+        }
+    },
+
+    // Markdown lint
+    "markdownlint.config": {
+        // Line length
+        "MD013": false,
+        // No Inline HTML
+        "MD033": false
+    }
 }
