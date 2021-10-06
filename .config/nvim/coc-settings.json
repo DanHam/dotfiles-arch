@@ -34,5 +34,10 @@
         "MD013": false,
         // No Inline HTML
         "MD033": false
-    }
+    },
+
+    "coc.preferences.formatOnSaveFiletypes": [
+        "javascript",
+        "typescript"
+    ]
 }

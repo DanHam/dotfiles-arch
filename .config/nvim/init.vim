@@ -193,6 +193,11 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 "
 Plug 'aliou/bats.vim'
 
+" typescript-vim
+"       - https://github.com/leafgarland/typescript-vim
+"       - Syntax file and other settings for TypeScript
+Plug 'leafgarland/typescript-vim'
+
 " --------------------------------------------------------------------------
 " vim-plug: end auto plugin management
 " --------------------------------------------------------------------------
@@ -215,6 +220,8 @@ let g:coc_global_extensions =
     \ 'coc-pyright',
     \ 'coc-sh',
     \ 'coc-yaml',
+    \ 'coc-prettier',
+    \ 'coc-tsserver'
     \ ]
 
 " nerdcommenter
