@@ -186,6 +186,13 @@ Plug 'junegunn/fzf.vim'
 "
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
+" bats.vim
+"       - https://github.com/aliou/bats.vim
+"       - Provides syntax highlighting, filetype detection etc for Bats
+"         (Bash Automated Testing System) test files
+"
+Plug 'aliou/bats.vim'
+
 " --------------------------------------------------------------------------
 " vim-plug: end auto plugin management
 " --------------------------------------------------------------------------
@@ -523,13 +530,6 @@ function! <SID>SynStack()
   endif
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
-
-" --------------------------------------------------------------------------
-" File types
-" --------------------------------------------------------------------------
-
-" Recognise .bats as shell files
-au BufRead,BufNewFile  *.bats   setfiletype sh
 
 " --------------------------------------------------------------------------
 " User Commands - Plugin specific
