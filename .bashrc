@@ -212,6 +212,11 @@ if command -v operator-sdk &>/dev/null; then
     source <(operator-sdk completion bash)
 fi
 
+# kubebuilder
+if command -v kubebuilder &>/dev/null; then
+    source <(kubebuilder completion bash)
+fi
+
 
 
 
