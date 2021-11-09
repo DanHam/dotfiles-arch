@@ -118,10 +118,12 @@ fi
 unset tmux_completions
 
 # Go command completions
-# https://github.com/thomasf/go-bash-completion.git
-go_completions="${completiond}/go/go-bash-completion.bash"
+# https://github.com/posener/complete
+#
+# Setup: go install github.com/posener/complete/gocomplete@v1.2.3
+go_completions="${GOPATH}/bin/gocomplete"
 if [ -f "${go_completions}" ]; then
-    source "${go_completions}"
+    complete -C "${go_completions}" go
 fi
 unset go_completions
 
