@@ -154,6 +154,15 @@ Plug 'honza/vim-snippets'
 "
 Plug 'hashivim/vim-terraform'
 
+" vim-hclfmt
+"
+"       - https://github.com/fatih/vim-hclfmt
+"       - Vim plugin to format Hashicorp Configuration Language (HCL) files
+"       - This is the editor integration. Run: go get
+"         github.com/fatih/hclfmt to install the actual binary
+"
+Plug 'fatih/vim-hclfmt'
+
 " vim-clang-format
 "       - https://github.com/rhysd/vim-clang-format
 "       - Formats your code with specific coding style using clang-format
@@ -294,6 +303,11 @@ let g:UltiSnipsJumpBackwardTrigger = "<C-b>"
 "
 " Run terraform fmt automatically when saving a *.tf or *.tfvars file
 let g:terraform_fmt_on_save = 1
+
+" vim-hclfmt
+"
+" Don't clash with vim-terraform
+let g:tf_fmt_autosave = 0
 
 " vim-clang-format
 "
